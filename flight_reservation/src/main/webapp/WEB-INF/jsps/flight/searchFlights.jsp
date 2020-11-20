@@ -10,11 +10,11 @@
 	rel="stylesheet">
 <style>
 .box {
-	width: 600px;
+	width: 600px; 
 	margin: 30px auto;
 }
 </style>
-</head>
+</head> 
 <body>
 	<!-- code to find flight is written in FlightsController -->
 	<div class="container-fluid">

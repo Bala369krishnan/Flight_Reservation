@@ -32,7 +32,8 @@ public class FlightsController {
 		}else {
 			modelMap.addAttribute("flights", flights);
 			return "flight/displayFlights";
-		}
+		} 
 		
 	}
 }
+ 
