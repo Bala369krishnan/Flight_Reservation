@@ -23,7 +23,7 @@ public class FlightsController {
 	FlightsRepository flightsRepo;
 	
 	@RequestMapping("/findFlights")
-	public String findFlights(@Valid @NotNull @RequestParam("from") String from ,@Valid @NotNull @RequestParam("to") String to ,@Valid @NotBlank @RequestParam("departureDate") Date date , ModelMap modelMap) {
+	public String findFlights(@RequestParam("from") String from ,@RequestParam("to") String to ,@RequestParam("departureDate") Date date , ModelMap modelMap) {
 		
 		List<Flights> flights = flightsRepo.findFlights(from, to, date);
 		if(flights.isEmpty()) {
