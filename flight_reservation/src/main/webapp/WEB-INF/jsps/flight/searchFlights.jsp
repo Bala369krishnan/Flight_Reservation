@@ -47,7 +47,7 @@
 				</div>
 				<div class="form-group col-md-4">
 				<label>Travel Date : </label>
-				<input type="date" name="departureDate"  class="form-control">
+				<input type="date" name="departureDate"  class="form-control" required>
 				</div>
 				
 				

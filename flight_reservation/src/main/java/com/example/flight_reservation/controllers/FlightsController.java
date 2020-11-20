@@ -3,6 +3,10 @@ package com.example.flight_reservation.controllers;
 import java.sql.Date;
 import java.util.List;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -19,7 +23,8 @@ public class FlightsController {
 	FlightsRepository flightsRepo;
 	
 	@RequestMapping("/findFlights")
-	public String findFlights(@RequestParam("from") String from , @RequestParam("to") String to , @RequestParam("departureDate") Date date , ModelMap modelMap) {
+	public String findFlights(@Valid @NotNull @RequestParam("from") String from ,@Valid @NotNull @RequestParam("to") String to ,@Valid @NotBlank @RequestParam("departureDate") Date date , ModelMap modelMap) {
+		
 		List<Flights> flights = flightsRepo.findFlights(from, to, date);
 		if(flights.isEmpty()) {
 			modelMap.addAttribute("flightsMsg", "No flights available");
