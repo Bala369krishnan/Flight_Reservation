@@ -22,7 +22,7 @@ public class ReservationUpdateRequest {
 	public void setCheckedIn(boolean checkedIn) {
 		this.checkedIn = checkedIn;
 	}
-
+ 
 	public int getNumberOfBags() {
 		return numberOfBags;
 	}
